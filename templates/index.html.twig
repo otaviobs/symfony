@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Index{% endblock %}
+
+{% block body %}
+    <h1 class="text-center mt-2">CRUD</h1>
+    <p class="text-center mb-1">Click any of the page below:</p>
+    <div class="row justify-content-center">    
+        <div class="col-3 align-self-center list-group">
+            <a href="{{ path('product_index') }}" class="btn btn-primary position-relative">
+                Product
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {{ totalProduct }}
+                    <span class="visually-hidden">total the records</span>
+                </span>
+            </a>
+            <a href="{{ path('tag_index') }}" class="btn btn-primary position-relative mt-3">
+                Tag
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {{ totalTag }}
+                    <span class="visually-hidden">total the records</span>
+                </span>
+            </a>
+        </div>
+    </div>
+{% endblock %}

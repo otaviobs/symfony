@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Tag{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Create new Tag</h1>
+
+    {{ include('tag/_form.html.twig') }}
+
+    <a class="btn btn-secondary mt-1" href="{{ path('tag_index') }}">Back</a>
+{% endblock %}
